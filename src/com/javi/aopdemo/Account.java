@@ -35,5 +35,12 @@ public class Account {
 	}
 	
 	
+	// toString() method
+	@Override
+	public String toString() {
+		return "Account [name=" + name + ", level=" + level + "]";
+	}
+	
+	
 
 }
