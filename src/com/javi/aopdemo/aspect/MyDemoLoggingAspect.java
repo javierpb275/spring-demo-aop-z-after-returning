@@ -1,6 +1,9 @@
 package com.javi.aopdemo.aspect;
 
+import java.util.List;
+
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.reflect.MethodSignature;
@@ -13,6 +16,16 @@ import com.javi.aopdemo.Account;
 @Component
 @Order(2)
 public class MyDemoLoggingAspect {
+	
+	// add a new advice for @AfterReturning on the findAccounts method
+	
+	@AfterReturning(
+			pointcut="com.javi.aopdemo.dao.AccountDAO.findAccounts(..)", //match on AccountDAO.findAccounts(..)
+			returning="result")//parameter name for return value
+	public void afterReturningFindAccountsAdvice(
+			JoinPoint theJoinPoint, List<Account> result) {
+		
+	}
 	
 	
 	@Before("com.javi.aopdemo.aspect.LuvAopExpressions.forDaoPackageNoGetterSetter()")//added fully qualified class name
