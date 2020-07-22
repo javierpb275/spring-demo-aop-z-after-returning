@@ -6,6 +6,20 @@ public class Account {
 	private String name;
 	private String level;
 	
+	//default contructor (no arg constructor):
+	public Account() {
+		
+	}
+	
+	
+	//constructor
+	public Account(String name, String level) {
+		this.name = name;
+		this.level = level;
+	}
+
+
+
 	//getters and setters
 	public String getName() {
 		return name;
