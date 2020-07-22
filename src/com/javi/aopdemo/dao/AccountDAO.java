@@ -1,5 +1,8 @@
 package com.javi.aopdemo.dao;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Component;
 
 import com.javi.aopdemo.Account;
@@ -9,6 +12,15 @@ public class AccountDAO {
 	
 	private String name;
 	private String serviceCode;
+	
+	// add a new method: findAccounts()
+	
+	public List<Account> findAccounts() {
+		
+		List<Account> myAccounts = new  ArrayList<>();
+		
+		return myAccounts;
+	}
 	
 	public void addAccount(Account theAccount, boolean vipFlag) {
 		
