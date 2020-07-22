@@ -25,6 +25,9 @@ public class AccountDAO {
 		Account temp3 = new Account("Luca", "Gold");
 		
 		// add them to our accounts list
+		myAccounts.add(temp1);
+		myAccounts.add(temp2);
+		myAccounts.add(temp3);
 		
 		return myAccounts;
 	}
